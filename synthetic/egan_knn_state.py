@@ -22,7 +22,7 @@ def twospirals_state(state):
     state['lbound'] = -10.0
     state['rbound'] =  0.1
 
-    state['batch_size'] = 1000
+    state['batch_size'] = 500
     state['knn_scale'] = 5e-4
 
     return state
@@ -36,7 +36,7 @@ def gaussian_mixture_state(state):
 
     state['momentum'] = 0.0
 
-    state['batch_size'] = 1000
+    state['batch_size'] = 500
 
     state['init_d'] = lasagne.init.Normal(0.01)
     state['init_g'] = lasagne.init.Normal(0.001)
@@ -124,7 +124,7 @@ def biased_gaussian_mixture_state(state):
     state['reg_min'] = 0.0
     state['reg_decay'] = None
 
-    state['batch_size'] = 1000
+    state['batch_size'] = 500
     state['momentum'] = 0.0
 
     state['multiplier'] = 10
