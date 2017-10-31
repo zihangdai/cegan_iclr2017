@@ -122,7 +122,7 @@ def compute_energy(disc_score, state):
     elif state['energy_form'] == 'identity':
         energy = T.sum(disc_score, axis=1)
     elif state['energy_form'] == 'softplus':
-        energy = T.nnet.softplus(T.sum(disc_score, axis=1))
+        energy = T.nnet.softplus(-T.sum(disc_score, axis=1))
     return energy
 
 #### Diagonal Normal log-probability
